@@ -1,0 +1,17 @@
+class PresentRPC < Formula
+  desc "Simple, idiomatic RPCs for Java, Javascript, Android, iOS, and more"
+  homepage "https://github.com/presentco/present-rpc"
+  url "https://github.com/presentco/present-rpc/raw/master/archive/present-rpc-1.0.0.tar.gz"
+  sha256 "df61a9b627dc710102222e912261aeba4062b8951bd3eab64e63d8a3ad064132"
+  version "1.0.0"
+
+  bottle :unneeded
+  depends_on :java => "1.8+"
+  depends_on "swift-protobuf"
+
+  def install
+    bin.install "present-rpc.sh"
+    #bin.install_symlink "#{libexec}/bin/catalina.sh" => "catalina"
+    bin.install_symlink "present-rpc.sh" => "present-rpc"
+  end
+end
