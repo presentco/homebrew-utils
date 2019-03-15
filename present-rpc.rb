@@ -1,4 +1,4 @@
-class PresentRPC < Formula
+class PresentRpc < Formula
   desc "Simple, idiomatic RPCs for Java, Javascript, Android, iOS, and more"
   homepage "https://github.com/presentco/present-rpc"
   url "https://github.com/presentco/present-rpc/raw/master/archive/present-rpc-1.0.0.tar.gz"
@@ -11,7 +11,6 @@ class PresentRPC < Formula
 
   def install
     bin.install "present-rpc.sh"
-    #bin.install_symlink "#{libexec}/bin/catalina.sh" => "catalina"
     bin.install_symlink "present-rpc.sh" => "present-rpc"
   end
 end
