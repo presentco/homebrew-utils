@@ -10,7 +10,10 @@ class PresentRpc < Formula
   depends_on "swift-protobuf"
 
   def install
+    inreplace "present-rpc.sh", "##PREFIX##", "#{prefix}"
+    prefix.install "present-rpc-compiler.jar"
     bin.install "present-rpc.sh"
     bin.install_symlink "present-rpc.sh" => "present-rpc"
   end
+
 end
